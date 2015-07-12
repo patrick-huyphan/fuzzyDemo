@@ -1,0 +1,8 @@
+C:\Users\patrickhuy\Documents\Visual Studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\bin\Debug\FuzzyDemo_DSS_Team_3.exe
+C:\Users\patrickhuy\Documents\Visual Studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\bin\Debug\FuzzyDemo_DSS_Team_3.pdb
+C:\Users\patrickhuy\Documents\Visual Studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\obj\x86\Debug\FuzzyDemo_DSS_Team_3.Form1.resources
+C:\Users\patrickhuy\Documents\Visual Studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\obj\x86\Debug\FuzzyDemo_DSS_Team_3.Properties.Resources.resources
+C:\Users\patrickhuy\Documents\Visual Studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\obj\x86\Debug\FuzzyDemo_DSS_Team_3.csproj.GenerateResource.Cache
+C:\Users\patrickhuy\Documents\Visual Studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\obj\x86\Debug\FuzzyDemo_DSS_Team_3.exe
+C:\Users\patrickhuy\Documents\Visual Studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\obj\x86\Debug\FuzzyDemo_DSS_Team_3.pdb
+C:\Users\patrickhuy\documents\visual studio 2010\Projects\FuzzyDemo_DSS_Team_3\FuzzyDemo_DSS_Team_3\obj\x86\Debug\FuzzyDemo_DSS_Team_3.csprojResolveAssemblyReference.cache
