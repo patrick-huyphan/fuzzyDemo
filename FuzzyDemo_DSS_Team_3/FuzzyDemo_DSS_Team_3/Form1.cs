@@ -32,7 +32,11 @@ namespace FuzzyDemo_DSS_Team_3
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            DrawFrame(panel1.CreateGraphics());
+            DrawFrame(panel1);
+            DrawFrame(panel2);
+            DrawFrame(panel3);
+            DrawFrame(panel4);
+            DrawFrame(panel5);
             //DrawLShapeLine(panel1.CreateGraphics(), 10, 10, 20, 40);
             DrawGraph(panel1.CreateGraphics(), 100, 100, 20, 40);
             
@@ -84,13 +88,14 @@ namespace FuzzyDemo_DSS_Team_3
 
             //g.DrawLines(myPen, points);
         }
-        public void DrawFrame(System.Drawing.Graphics g)
+        public void DrawFrame(Panel panel)
         {
+            System.Drawing.Graphics g = panel.CreateGraphics();
             Pen myPen = new Pen(Color.Cyan);
             myPen.Width = 2;
             //g.DrawRectangle(myPen, new Rectangle(0, 0, 300, 300));
-            g.DrawLine(myPen, new Point(10, panel1.Height - 10), new Point(panel1.Width - 20, panel1.Height - 10));
-            g.DrawLine(myPen, new Point(10, panel1.Height-10), new Point(10, 0));
+            g.DrawLine(myPen, new Point(10, panel.Height - 10), new Point(panel.Width - 20, panel.Height - 10));
+            g.DrawLine(myPen, new Point(10, panel.Height-10), new Point(10, 0));
         }
 
         public void DrawLineYfx(System.Drawing.Graphics g, Point start, float k)
@@ -112,7 +117,7 @@ namespace FuzzyDemo_DSS_Team_3
             Pen p = new Pen(Color.Red);
             graphics.DrawLine(p, 10, 10, 100, 100);
 
-            DrawFrame(panel1.CreateGraphics());
+            DrawFrame(panel1);
             DrawLShapeLine(panel1.CreateGraphics(), 10, 10, 20, 40);
             DrawGraph(panel1.CreateGraphics(), 100, 100, 20, 40);
 

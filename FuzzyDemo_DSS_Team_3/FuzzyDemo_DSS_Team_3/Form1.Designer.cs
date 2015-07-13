@@ -40,8 +40,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -51,7 +55,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(9, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(422, 241);
+            this.panel1.Size = new System.Drawing.Size(209, 103);
             this.panel1.TabIndex = 0;
             // 
             // button1
@@ -157,22 +161,12 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(219, 302);
+            this.groupBox2.Location = new System.Drawing.Point(219, 388);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(442, 70);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Result:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.panel1);
-            this.groupBox3.Location = new System.Drawing.Point(219, 30);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(442, 266);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Graph:";
             // 
             // label5
             // 
@@ -183,11 +177,53 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "xxxxxxxxx";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.panel5);
+            this.groupBox3.Controls.Add(this.panel3);
+            this.groupBox3.Controls.Add(this.panel4);
+            this.groupBox3.Controls.Add(this.panel2);
+            this.groupBox3.Controls.Add(this.panel1);
+            this.groupBox3.Location = new System.Drawing.Point(219, 30);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(442, 352);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Graph:";
+            // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(224, 19);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(209, 103);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(9, 128);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(209, 103);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(224, 128);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(209, 103);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(9, 237);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(424, 103);
+            this.panel5.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 388);
+            this.ClientSize = new System.Drawing.Size(673, 470);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -220,6 +256,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 
