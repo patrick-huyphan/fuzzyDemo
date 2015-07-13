@@ -98,6 +98,7 @@ namespace FuzzyDemo_DSS_Team_3
             g.DrawLine(myPen, new Point(10, panel.Height-10), new Point(10, 0));
         }
 
+        //Todo: create draw graph funtion for 4 fuzzy set
         public void DrawLineYfx(System.Drawing.Graphics g, Point start, float k)
         {
             Pen myPen = new Pen(Color.Black);
@@ -107,25 +108,27 @@ namespace FuzzyDemo_DSS_Team_3
             g.DrawLine(myPen, start, new Point((int)(start.X +50), (int)(start.X * k)));
         }
 
- 
+        //get input data, convert to fuzzy funtion, 
+        //inferen fuzzy, and defuzzy, 
+        //show the result, draw graph
         private void button1_Click(object sender, EventArgs e)
         {
             //Point pt1 = new Point(R.Next(this.Width), R.Next(this.Height));
             //Point pt2 = new Point(R.Next(this.Width), R.Next(this.Height));
 
-            Graphics graphics = this.CreateGraphics();
+            Graphics graphics = panel1.CreateGraphics();
             Pen p = new Pen(Color.Red);
             graphics.DrawLine(p, 10, 10, 100, 100);
 
             DrawFrame(panel1);
-            DrawLShapeLine(panel1.CreateGraphics(), 10, 10, 20, 40);
-            DrawGraph(panel1.CreateGraphics(), 100, 100, 20, 40);
+            DrawLShapeLine(graphics, 10, 10, 20, 40);
+            DrawGraph(graphics, 100, 100, 20, 40);
 
             //System.Drawing.Drawing2D.GraphicsPath shape = new System.Drawing.Drawing2D.GraphicsPath();
             //shape.AddRectangle(new Rectangle(new Point(Math.Min(pt1.X, pt2.X), Math.Min(pt1.Y, pt2.Y)), new Size(Math.Abs(pt2.X - pt1.X), Math.Abs(pt2.Y - pt1.Y))));
             //Paths.Add(shape);
 
-            this.Refresh();
+            panel1.Refresh();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)

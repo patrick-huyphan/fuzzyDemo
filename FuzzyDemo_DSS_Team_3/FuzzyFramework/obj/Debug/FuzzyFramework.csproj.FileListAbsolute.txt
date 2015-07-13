@@ -1,0 +1,7 @@
+D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\bin\Debug\FuzzyFramework.dll
+D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\bin\Debug\FuzzyFramework.pdb
+D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\bin\Debug\PolyLib.dll
+D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\bin\Debug\PolyLib.pdb
+D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\obj\Debug\FuzzyFramework.csprojResolveAssemblyReference.cache
+D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\obj\Debug\FuzzyFramework.dll
+D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\obj\Debug\FuzzyFramework.pdb
