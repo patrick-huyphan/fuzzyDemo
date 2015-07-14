@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using FuzzyFramework;
+using FuzzyFramework.Sets;
+using FuzzyFramework.Dimensions;
+using FuzzyFramework.Members;
 
 //core of fuzzy set, include fuzzy function, 
 namespace FuzzyDemo_DSS_Team_3
