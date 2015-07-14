@@ -8,3 +8,8 @@ D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\PolyLib\bin\Debug\PolyLib.pdb
 D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\PolyLib\obj\Debug\PolyLib.dll
 D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\PolyLib\obj\Debug\PolyLib.pdb
 D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\PolyLib\obj\Debug\PolyLib.csprojResolveAssemblyReference.cache
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\PolyLib\bin\Debug\PolyLib.dll
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\PolyLib\bin\Debug\PolyLib.pdb
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\PolyLib\obj\Debug\PolyLib.csprojResolveAssemblyReference.cache
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\PolyLib\obj\Debug\PolyLib.dll
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\PolyLib\obj\Debug\PolyLib.pdb

@@ -5,3 +5,10 @@ D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\bin\Debug\PolyLib.pdb
 D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\obj\Debug\FuzzyFramework.csprojResolveAssemblyReference.cache
 D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\obj\Debug\FuzzyFramework.dll
 D:\00_\05_DSS\FuzzyFramework\FuzzyFramework\obj\Debug\FuzzyFramework.pdb
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\bin\Debug\FuzzyFramework.dll
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\bin\Debug\FuzzyFramework.pdb
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\bin\Debug\PolyLib.dll
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\bin\Debug\PolyLib.pdb
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\obj\Debug\FuzzyFramework.csprojResolveAssemblyReference.cache
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\obj\Debug\FuzzyFramework.dll
+D:\07_workspace\DSS_Demo\fuzzyDemo\FuzzyDemo_DSS_Team_3\FuzzyFramework\obj\Debug\FuzzyFramework.pdb

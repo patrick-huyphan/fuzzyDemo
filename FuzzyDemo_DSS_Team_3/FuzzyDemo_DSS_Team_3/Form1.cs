@@ -17,23 +17,46 @@ namespace FuzzyDemo_DSS_Team_3
 {
     public partial class Form1 : Form
     {
+        #region input set
+        ////Definition of dimensions on which we will measure the input values
+        //ContinuousDimension height = new ContinuousDimension("Height", "Personal height", "cm", 100, 250);
+        //ContinuousDimension weight = new ContinuousDimension("Weight", "Personal weight", "kg", 30, 200);
+        ContinuousDimension MACD = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
+        ContinuousDimension RSI = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
+        ContinuousDimension SO = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
+        ContinuousDimension OBV = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
+        #endregion
+
+        #region output set
+        ////Definition of dimension for output value
+        //ContinuousDimension consequent = new ContinuousDimension("Suitability for basket ball", "0 = not good, 5 = very good", "grade", 0, 5);
+
+        #endregion
+        #region merger set
+        ////  input sets:
+        //FuzzySet tall = new LeftLinearSet(height, "Tall person", 170, 185);
+        //FuzzySet weighty = new LeftLinearSet(weight, "Weighty person", 80, 100);
+        ////  output set:
+        //FuzzySet goodForBasket = new LeftLinearSet(consequent, "Good in basket ball", 0, 5);
+
+        #endregion
         #region Definition of dimensions
         protected static IDiscreteDimension product;
         protected static IContinuousDimension price;
         protected static IContinuousDimension action;
+
         #endregion
 
         #region Definition of members for discrete fuzzy set
         protected static stockFuzzy apple;
-        protected static stockFuzzy pear;
-        protected static stockFuzzy tomato;
-        protected static stockFuzzy blueberry;
         #endregion
 
         #region Basic single-dimensional fuzzy sets
         public static DiscreteSet fruits;
         public static ContinuousSet cheap;
         public static ContinuousSet buyIt;
+        public static ContinuousSet SellIt;
+        public static ContinuousSet HoldIt;
         #endregion
 
         #region Internal properties
@@ -47,18 +70,11 @@ namespace FuzzyDemo_DSS_Team_3
         #endregion
         private Random R = new Random();
         private List<System.Drawing.Drawing2D.GraphicsPath> Paths = new List<System.Drawing.Drawing2D.GraphicsPath>();
-
-
-
-
-        fuzzyCore x;
         
         public Form1()
         {
             InitializeComponent();
             //this.Paint += new PaintEventHandler(Form1_Paint);
-            x = new fuzzyCore();
-            x.setA(100);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -179,43 +195,23 @@ namespace FuzzyDemo_DSS_Team_3
 
         #region Builiding the overall relation from input values, refresing the form content immediatelly
 
-        protected void buildFruitsSet()
-        {
-            product = new DiscreteDimension("Product", "Product being offered");
-            fruits = new DiscreteSet(product, "Fruits");
-            product.DefaultSet = fruits;
+        protected void buildMACDSet()
+        { }
 
-            apple = new stockFuzzy(product, "Apple");
-            pear = new stockFuzzy(product, "Pear");
-            tomato = new stockFuzzy(product, "Tomato");
-            blueberry = new stockFuzzy(product, "Blueberry");
+        protected void buildRSISet()
+        { }
 
+        protected void buildSOSet()
+        { }
 
-            //fruits.AddMember(apple, (double)trackBar1.Value / 100);
-            //fruits.AddMember(pear, (double)trackBar2.Value / 100);
-            //fruits.AddMember(tomato, (double)trackBar5.Value / 100);
-            //fruits.AddMember(blueberry, (double)trackBar9.Value / 100);
+        protected void buildOBVSet()
+        { }
 
-            RelationImage imgFruits = new RelationImage(fruits);
-            //Bitmap bmpFruits = new Bitmap(pictureBoxFruits.Width, pictureBoxFruits.Height);
-            //imgFruits.DrawImage(Graphics.FromImage(bmpFruits));
-            //pictureBoxFruits.Image = bmpFruits;
-        }
+        protected void buildHoldItSet()
+        { }
 
-        protected void buildCheapSet()
-        {
-            price = new ContinuousDimension("Price", "Price we are about to pay for an offer", "$", 0, 1000);
-
-            //if (trackBarCheapSupport.Value < trackBarCheapKernel.Value)
-            //    trackBarCheapSupport.Value = trackBarCheapKernel.Value;
-
-            //cheap = new RightLinearSet(price, "Cheap", trackBarCheapKernel.Value, trackBarCheapSupport.Value);
-
-            //RelationImage imgCheap = new RelationImage(cheap);
-            //Bitmap bmpCheap = new Bitmap(pictureBoxCheap.Width, pictureBoxCheap.Height);
-            //imgCheap.DrawImage(Graphics.FromImage(bmpCheap));
-            //pictureBoxCheap.Image = bmpCheap;
-        }
+        protected void buildSellItSet()
+        { }
 
         protected void buildBuyItSet()
         {

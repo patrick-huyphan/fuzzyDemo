@@ -57,6 +57,7 @@
     <Compile Include="fuzzyInference.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stockFuzzy.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,6 +79,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FuzzyFramework.Graphics\FuzzyFramework.Graphics.csproj">
+      <Project>{76164795-60DB-4B80-91D9-70C9C71771CA}</Project>
+      <Name>FuzzyFramework.Graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FuzzyFramework\FuzzyFramework.csproj">
+      <Project>{39015A29-4688-45B9-B52C-C6D54F287303}</Project>
+      <Name>FuzzyFramework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
