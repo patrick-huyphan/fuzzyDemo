@@ -21,10 +21,35 @@ namespace FuzzyDemo_DSS_Team_3
         ////Definition of dimensions on which we will measure the input values
         //ContinuousDimension height = new ContinuousDimension("Height", "Personal height", "cm", 100, 250);
         //ContinuousDimension weight = new ContinuousDimension("Weight", "Personal weight", "kg", 30, 200);
-        ContinuousDimension MACD = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
-        ContinuousDimension RSI = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
-        ContinuousDimension SO = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
-        ContinuousDimension OBV = new ContinuousDimension("Height", "Personal height", "cm", 0, 100);
+        protected static IContinuousDimension MACD;
+        protected static IContinuousDimension RSI;
+        protected static IContinuousDimension SO;
+        protected static IContinuousDimension OBV;
+        //protected static IDiscreteDimension product;
+        //protected static IContinuousDimension price;
+        protected static IContinuousDimension action;
+
+        public static ContinuousSet lMACD;
+        public static ContinuousSet hMACD;
+        public static ContinuousSet lRSI;
+        public static ContinuousSet mRSI;
+        public static ContinuousSet hRSI;
+        public static ContinuousSet lSO;
+        public static ContinuousSet mSO;
+        public static ContinuousSet hSO;
+        public static ContinuousSet lOBV;
+        public static ContinuousSet mOBV;
+        public static ContinuousSet hOBV;
+
+        //public static ContinuousSet buy;
+        //public static ContinuousSet hold;
+        //public static ContinuousSet sell;
+        //public static DiscreteSet fruits;
+        //public static ContinuousSet cheap;
+        public static ContinuousSet buyIt;
+        public static ContinuousSet SellIt;
+        public static ContinuousSet HoldIt;
+
         #endregion
 
         #region output set
@@ -41,9 +66,7 @@ namespace FuzzyDemo_DSS_Team_3
 
         #endregion
         #region Definition of dimensions
-        protected static IDiscreteDimension product;
-        protected static IContinuousDimension price;
-        protected static IContinuousDimension action;
+
 
         #endregion
 
@@ -52,11 +75,7 @@ namespace FuzzyDemo_DSS_Team_3
         #endregion
 
         #region Basic single-dimensional fuzzy sets
-        public static DiscreteSet fruits;
-        public static ContinuousSet cheap;
-        public static ContinuousSet buyIt;
-        public static ContinuousSet SellIt;
-        public static ContinuousSet HoldIt;
+
         #endregion
 
         #region Internal properties
@@ -196,16 +215,47 @@ namespace FuzzyDemo_DSS_Team_3
         #region Builiding the overall relation from input values, refresing the form content immediatelly
 
         protected void buildMACDSet()
-        { }
+        {
+            MACD = new ContinuousDimension("MACD index", "MACD index", "unit", 0, 100);
+
+            lMACD = new RightQuadraticSet(MACD, "Low MACD", 10, 15, 20);
+            hMACD = new LeftQuadraticSet(MACD, "High MACD", 20, 25, 30);
+            
+        }
 
         protected void buildRSISet()
-        { }
+        {
+            RSI = new ContinuousDimension("RSI index", "RSI index", "unit", 0, 100);
+
+            lRSI = new RightQuadraticSet(RSI, "Low RSI", 10, 15, 20);
+            hRSI = new LeftQuadraticSet(RSI, "High RSI", 20, 25, 30);
+            mRSI = new BellSet(RSI, "Correct RSI", 20, 5, 10);
+        }
 
         protected void buildSOSet()
-        { }
+        {
+            SO = new ContinuousDimension("SO index", "SO index", "unit", 0, 100);
+
+            lSO = new RightQuadraticSet(SO, "Low SO", 10, 15, 20);
+            hSO = new LeftQuadraticSet(SO, "High SO", 20, 25, 30);
+            mSO = new BellSet(SO, "Correct SO", 20, 5, 10);
+        }
 
         protected void buildOBVSet()
-        { }
+        {
+            OBV = new ContinuousDimension("OBV index", "OBV index", "unit", 0, 100);
+            lOBV = new RightQuadraticSet(OBV, "Low OBV", 10, 15, 20);
+            hOBV = new LeftQuadraticSet(OBV, "High OBV", 20, 25, 30);
+        }
+
+        protected void buildActionSet()
+        {
+            action = new ContinuousDimension("Action", "Action for stock", "action", 0, 100);
+            buyIt = new RightQuadraticSet(action, "buy stock", 0, 50, 50);
+            SellIt = new LeftQuadraticSet(action, "sell stock", 0, 50, 50);
+            HoldIt = new BellSet(action, "hold stock", 0, 50, 50);
+
+        }
 
         protected void buildHoldItSet()
         { }
