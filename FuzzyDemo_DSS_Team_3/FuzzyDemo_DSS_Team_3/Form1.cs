@@ -214,12 +214,12 @@ namespace FuzzyDemo_DSS_Team_3
 
         #region Builiding the overall relation from input values, refresing the form content immediatelly
 
-        protected void buildMACDSet()
+        protected void buildMACDSet(decimal baseline)
         {
             MACD = new ContinuousDimension("MACD index", "MACD index", "unit", 0, 100);
-
-            lMACD = new RightQuadraticSet(MACD, "Low MACD", 10, 15, 20);
-            hMACD = new LeftQuadraticSet(MACD, "High MACD", 20, 25, 30);
+            //TriangularSet t = new TriangularSet(MACD, " MACD", 50, 50);
+            lMACD = new RightLinearSet(MACD, "Low MACD", 0, baseline);
+            hMACD = new LeftLinearSet(MACD, "High MACD", baseline, 100);
             
         }
 
@@ -227,25 +227,26 @@ namespace FuzzyDemo_DSS_Team_3
         {
             RSI = new ContinuousDimension("RSI index", "RSI index", "unit", 0, 100);
 
-            lRSI = new RightQuadraticSet(RSI, "Low RSI", 10, 15, 20);
-            hRSI = new LeftQuadraticSet(RSI, "High RSI", 20, 25, 30);
-            mRSI = new BellSet(RSI, "Correct RSI", 20, 5, 10);
+            lRSI = new RightLinearSet(RSI, "Low RSI", 0, 20);
+            hRSI = new LeftLinearSet(RSI, "High RSI", 80, 100);
+            mRSI = new BellSet(RSI, "Middle RSI", 20, 5, 80);
         }
 
         protected void buildSOSet()
         {
             SO = new ContinuousDimension("SO index", "SO index", "unit", 0, 100);
 
-            lSO = new RightQuadraticSet(SO, "Low SO", 10, 15, 20);
-            hSO = new LeftQuadraticSet(SO, "High SO", 20, 25, 30);
-            mSO = new BellSet(SO, "Correct SO", 20, 5, 10);
+            lSO = new RightLinearSet(SO, "Low SO",0,20);
+            hSO = new LeftLinearSet(SO, "High SO", 80, 100);
+            mSO = new BellSet(SO, "Middle SO", 20, 5, 80);
         }
 
-        protected void buildOBVSet()
+        protected void buildOBVSet( decimal baseline)
         {
             OBV = new ContinuousDimension("OBV index", "OBV index", "unit", 0, 100);
-            lOBV = new RightQuadraticSet(OBV, "Low OBV", 10, 15, 20);
-            hOBV = new LeftQuadraticSet(OBV, "High OBV", 20, 25, 30);
+            //TriangularSet t = new TriangularSet(OBV, " MACD", 50, 50);
+            lOBV = new RightLinearSet(OBV, "Low OBV", 0, baseline);
+            hOBV = new LeftLinearSet(OBV, "High OBV", baseline, 100);
         }
 
         protected void buildActionSet()
@@ -254,36 +255,6 @@ namespace FuzzyDemo_DSS_Team_3
             buyIt = new RightQuadraticSet(action, "buy stock", 0, 50, 50);
             SellIt = new LeftQuadraticSet(action, "sell stock", 0, 50, 50);
             HoldIt = new BellSet(action, "hold stock", 0, 50, 50);
-
-        }
-
-        protected void buildHoldItSet()
-        { }
-
-        protected void buildSellItSet()
-        { }
-
-        protected void buildBuyItSet()
-        {
-            action = new ContinuousDimension("Action", "-10 surely don't buy ... +10 surely buy", "", -10, +10);
-
-            //if (trackBarBuyItKernel.Value < -8)
-            //    trackBarBuyItKernel.Value = -8;
-            //if (trackBarBuyItCrossover.Value < -9)
-            //    trackBarBuyItCrossover.Value = -9;
-
-            //if (trackBarBuyItCrossover.Value > trackBarBuyItKernel.Value - 1)
-            //    trackBarBuyItCrossover.Value = trackBarBuyItKernel.Value - 1;
-
-            //if (trackBarBuyItSupport.Value > trackBarBuyItCrossover.Value - 1)
-            //    trackBarBuyItSupport.Value = trackBarBuyItCrossover.Value - 1;
-
-            //buyIt = new LeftQuadraticSet(action, "Buy it!", trackBarBuyItSupport.Value, trackBarBuyItCrossover.Value, trackBarBuyItKernel.Value);
-
-            //RelationImage imgBuyIt = new RelationImage(buyIt);
-            //Bitmap bmpBuyIt = new Bitmap(pictureBoxBuyIt.Width, pictureBoxBuyIt.Height);
-            //imgBuyIt.DrawImage(Graphics.FromImage(bmpBuyIt));
-            //pictureBoxBuyIt.Image = bmpBuyIt;
 
         }
 
@@ -302,8 +273,21 @@ namespace FuzzyDemo_DSS_Team_3
             _waitingForBuild = false;
             _building = true;
 
-            bool _expressionChanged = false;
+            //bool _expressionChanged = false;
 
+            FuzzyRelation rule1 = hMACD & lRSI & lSO & hOBV & buyIt;
+            FuzzyRelation rule2 = lMACD & hRSI & hSO & lOBV & buyIt;
+            FuzzyRelation rule3 = hMACD & mRSI & hSO & lOBV & buyIt;
+            FuzzyRelation rule4 = lMACD & mRSI & hSO & lOBV & SellIt;
+            FuzzyRelation rule5 = lRSI & lSO & hOBV & buyIt;
+            FuzzyRelation rule6 = hRSI & hSO & lOBV & SellIt;
+            FuzzyRelation rule7 = lMACD & hRSI & hSO & SellIt;
+            FuzzyRelation rule8 = hMACD & mRSI & mSO & HoldIt;
+            FuzzyRelation rule9 = hMACD & mRSI & mSO & HoldIt;
+
+            FuzzyRelation Decision = rule1 | rule2 | rule3 | rule4 | rule5 | rule6 | rule7 | rule8 | rule9;
+
+            //FuzzyRelation rule10 = lMACD & mRSI & hSO & lOBV;
             //decimal inputProduct = ddlProduct.SelectedIndex + 1;
             //decimal inputPrice = txtPrice.Value;
 
