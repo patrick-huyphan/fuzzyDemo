@@ -411,6 +411,21 @@ namespace FuzzyDemo_DSS_Team_3
             _building = false;
         }
 
+        protected Defuzzification deFuzzy(FuzzyRelation relation, decimal inputMACD, decimal inputRSI, decimal inputSO, decimal inputOBV)
+        {
+            Defuzzification result = new MeanOfMaximum(
+                relation,
+                new Dictionary<IDimension, decimal>{
+                    { MACD, inputMACD },
+                    { RSI, inputRSI },
+                    { SO, inputSO },
+                    { OBV, inputOBV }
+                }
+            );
+
+            return result;
+        }
+
         #endregion
 
 
